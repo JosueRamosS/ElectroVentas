@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ElectroVentas</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_facturacion">Facturación</string>
+    <string name="nav_inventario">Inventario</string>
+    <string name="nav_personal">Personal</string>
+    <string name="nav_estadisticas">Estadísticas</string>
+
+    <!-- Home Fragment -->
+    <string name="home_title">ElectroVentas</string>
+    <string name="home_subtitle">Sistema de Facturación Integral</string>
+    <string name="ventas_hoy">Ventas Hoy</string>
+    <string name="productos_total">Productos</string>
+    <string name="personal_activo">Personal</string>
+
+    <!-- Dashboard Items -->
+    <string name="dashboard_facturacion_title">Generar Documento</string>
+    <string name="dashboard_facturacion_subtitle">Boletas, Facturas, Notas</string>
+    <string name="dashboard_inventario_title">Inventario</string>
+    <string name="dashboard_inventario_subtitle">Gestión de Productos</string>
+    <string name="dashboard_personal_title">Personal</string>
+    <string name="dashboard_personal_subtitle">Control de Asistencia</string>
+    <string name="dashboard_estadisticas_title">Estadísticas</string>
+    <string name="dashboard_estadisticas_subtitle">Reportes y Análisis</string>
+
+    <!-- Facturación Fragment -->
+    <string name="facturacion_title">Generar Documento</string>
+    <string name="tipo_documento_hint">Tipo de Documento</string>
+    <string name="dni_hint">DNI</string>
+    <string name="nombre_cliente_hint">Nombre del Cliente</string>
+    <string name="producto_hint">Producto</string>
+    <string name="marca_hint">Marca</string>
+    <string name="modelo_hint">Modelo</string>
+    <string name="serie_hint">Serie</string>
+    <string name="precio_hint">Precio (S/)</string>
+    <string name="btn_buscar_cliente">Buscar</string>
+    <string name="btn_generar_documento">Generar Documento</string>
+    <string name="datos_cliente">Datos del Cliente</string>
+    <string name="detalle_producto">Detalle del Producto</string>
+
+    <!-- Inventario Fragment -->
+    <string name="inventario_title">Inventario</string>
+    <string name="btn_filtros">Filtros</string>
+    <string name="stock_total">Total</string>
+    <string name="stock_disponible">En Stock</string>
+    <string name="stock_bajo">Stock Bajo</string>
+    <string name="stock_agotado">Agotado</string>
+    <string name="agregar_producto">Agregar nuevo producto</string>
+
+    <!-- Personal Fragment -->
+    <string name="personal_title">Control de Personal</string>
+    <string name="resumen_hoy">Resumen de Hoy</string>
+    <string name="empleados_activos">Activos</string>
+    <string name="empleados_ausentes">Ausentes</string>
+    <string name="empleados_inactivos">Inactivos</string>
+    <string name="estado_activo">🟢 ACTIVO</string>
+    <string name="estado_inactivo">🔴 INACTIVO</string>
+    <string name="estado_ausente">🟡 AUSENTE</string>
+    <string name="btn_registrar_entrada">Registrar Entrada</string>
+    <string name="btn_registrar_salida">Registrar Salida</string>
+    <string name="btn_jornada_completa">Jornada Completa</string>
+
+    <!-- Estadísticas Fragment -->
+    <string name="estadisticas_title">Reportes y Estadísticas</string>
+    <string name="panel_control">Panel de Control</string>
+    <string name="ventas_mes">Ventas del Mes</string>
+    <string name="productos_vendidos">Productos Vendidos</string>
+
+    <!-- Tipos de Documento -->
+    <string name="tipo_boleta">Boleta</string>
+    <string name="tipo_factura">Factura</string>
+    <string name="tipo_nota_venta">Nota de Venta</string>
+
+    <!-- Roles -->
+    <string name="rol_admin">Admin</string>
+    <string name="rol_vendedor">Vendedor</string>
+
+    <!-- Mensajes -->
+    <string name="dni_invalido">Ingrese un DNI válido de 8 dígitos</string>
+    <string name="buscando_cliente">Buscando cliente...</string>
+    <string name="cliente_encontrado">Cliente encontrado</string>
+    <string name="seleccione_tipo_documento">Seleccione el tipo de documento</string>
+    <string name="ingrese_dni">Ingrese el DNI del cliente</string>
+    <string name="busque_cliente">Busque el cliente por DNI</string>
+    <string name="ingrese_producto">Ingrese el producto</string>
+    <string name="ingrese_precio">Ingrese el precio</string>
+    <string name="documento_generado">%s generada exitosamente</string>
+
+    <!-- Formatos -->
+    <string name="formato_precio">S/ %.2f</string>
+    <string name="formato_stock">Stock: %d</string>
+    <string name="formato_marca">Marca: %s</string>
+    <string name="formato_modelo">Modelo: %s</string>
+    <string name="formato_entrada_salida">Entrada: %s | Salida: %s</string>
+    <string name="formato_entrada">Entrada: %s | En turno</string>
+    <string name="sin_registro">No registrado</string>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.electroventas.facturacion.fragments.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_facturacion"
+            app:destination="@id/nav_facturacion" />
+
+        <action
+            android:id="@+id/action_home_to_inventario"
+            app:destination="@id/nav_inventario" />
+
+        <action
+            android:id="@+id/action_home_to_personal"
+            app:destination="@id/nav_personal" />
+
+        <action
+            android:id="@+id/action_home_to_estadisticas"
+            app:destination="@id/nav_estadisticas" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_facturacion"
+        android:name="com.electroventas.facturacion.fragments.FacturacionFragment"
+        android:label="Facturación"
+        tools:layout="@layout/fragment_facturacion" />
+
+    <fragment
+        android:id="@+id/nav_inventario"
+        android:name="com.electroventas.facturacion.fragments.InventarioFragment"
+        android:label="Inventario"
+        tools:layout="@layout/fragment_inventario" />
+
+    <fragment
+        android:id="@+id/nav_personal"
+        android:name="com.electroventas.facturacion.fragments.PersonalFragment"
+        android:label="Personal"
+        tools:layout="@layout/fragment_personal" />
+
+    <fragment
+        android:id="@+id/nav_estadisticas"
+        android:name="com.electroventas.facturacion.fragments.EstadisticasFragment"
+        android:label="Estadísticas"
+        tools:layout="@layout/fragment_estadisticas" />
+
+</navigation>
