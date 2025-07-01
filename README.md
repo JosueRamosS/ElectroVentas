@@ -140,6 +140,7 @@ app/
 1. **Clonar el repositorio**
    ```bash
    git clone https://github.com/JosueRamosS/ExamenFinal
+   cd ExamenFinal
    ```
 
 2. **Abrir en Android Studio**
@@ -194,36 +195,7 @@ ElectroVentas utiliza **SharedPreferences** con **Gson** para persistencia local
 
 ```kotlin
 // Ejemplo de guardado de datos
-dataManager.guardarProductos(listaProductos)
-dataManager.actualizarVentasDiarias(montoVenta)
 dataManager.guardarDocumento(documento)
-```
-
-### 📊 Estructura de Datos
-
-#### Productos
-```kotlin
-data class Producto(
-    val id: Int,
-    val nombre: String,
-    val marca: String,
-    val modelo: String,
-    val categoria: String,
-    val precio: Double,
-    val stock: Int
-)
-```
-
-#### Empleados
-```kotlin
-data class Empleado(
-    val id: Int,
-    val nombre: String,
-    val rol: String,
-    val horaEntrada: String?,
-    val horaSalida: String?,
-    val estado: EstadoEmpleado
-)
 ```
 
 #### Documentos Generados
