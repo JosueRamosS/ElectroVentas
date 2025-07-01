@@ -1,3 +1,4 @@
+// ======= MainActivity.kt (SOLUCIÓN SIMPLE) =======
 package com.electroventas.facturacion
 
 import android.os.Bundle
@@ -19,8 +20,25 @@ class MainActivity : AppCompatActivity() {
         // Configurar navegación
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         val navController = navHostFragment.navController
-
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        // Configuración estándar
         bottomNav.setupWithNavController(navController)
+
+        // SOLUCIÓN SIMPLE: Listener personalizado solo para Home
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    // Siempre ir al fragment Home principal
+                    navController.popBackStack(R.id.nav_home, false)
+                    true
+                }
+                else -> {
+                    // Para otros items, usar navegación normal
+                    navController.navigate(item.itemId)
+                    true
+                }
+            }
+        }
     }
 }

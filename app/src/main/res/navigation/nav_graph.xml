@@ -5,52 +5,108 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/nav_home">
 
+    <!-- Fragment principal del dashboard -->
     <fragment
         android:id="@+id/nav_home"
         android:name="com.electroventas.facturacion.fragments.HomeFragment"
         android:label="Inicio"
-        tools:layout="@layout/fragment_home">
+        tools:layout="@layout/fragment_home_mejorado">
 
+        <!-- Acciones de navegación desde el home -->
         <action
             android:id="@+id/action_home_to_facturacion"
-            app:destination="@id/nav_facturacion" />
+            app:destination="@id/nav_facturacion"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
         <action
             android:id="@+id/action_home_to_inventario"
-            app:destination="@id/nav_inventario" />
+            app:destination="@id/nav_inventario"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
         <action
             android:id="@+id/action_home_to_personal"
-            app:destination="@id/nav_personal" />
+            app:destination="@id/nav_personal"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
         <action
             android:id="@+id/action_home_to_estadisticas"
-            app:destination="@id/nav_estadisticas" />
+            app:destination="@id/nav_estadisticas"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <!-- Nueva acción para ir al historial -->
+        <action
+            android:id="@+id/action_home_to_historial"
+            app:destination="@id/nav_historial"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out_down" />
 
     </fragment>
 
+    <!-- Fragment de facturación -->
     <fragment
         android:id="@+id/nav_facturacion"
         android:name="com.electroventas.facturacion.fragments.FacturacionFragment"
         android:label="Facturación"
-        tools:layout="@layout/fragment_facturacion" />
+        tools:layout="@layout/fragment_facturacion">
 
+        <!-- Acción para ir al historial después de generar documento -->
+        <action
+            android:id="@+id/action_facturacion_to_historial"
+            app:destination="@id/nav_historial"
+            app:enterAnim="@anim/slide_in_up"
+            app:exitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <!-- Fragment de inventario -->
     <fragment
         android:id="@+id/nav_inventario"
         android:name="com.electroventas.facturacion.fragments.InventarioFragment"
         android:label="Inventario"
         tools:layout="@layout/fragment_inventario" />
 
+    <!-- Fragment de personal -->
     <fragment
         android:id="@+id/nav_personal"
         android:name="com.electroventas.facturacion.fragments.PersonalFragment"
         android:label="Personal"
         tools:layout="@layout/fragment_personal" />
 
+    <!-- Fragment de estadísticas -->
     <fragment
         android:id="@+id/nav_estadisticas"
         android:name="com.electroventas.facturacion.fragments.EstadisticasFragment"
         android:label="Estadísticas"
         tools:layout="@layout/fragment_estadisticas" />
+
+    <!-- Nuevo fragment de historial -->
+    <fragment
+        android:id="@+id/nav_historial"
+        android:name="com.electroventas.facturacion.fragments.HistorialFragment"
+        android:label="Historial"
+        tools:layout="@layout/fragment_historial">
+
+        <!-- Acción para volver a facturación desde historial -->
+        <action
+            android:id="@+id/action_historial_to_facturacion"
+            app:destination="@id/nav_facturacion"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right" />
+
+    </fragment>
 
 </navigation>
