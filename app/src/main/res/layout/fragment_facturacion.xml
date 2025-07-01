@@ -108,6 +108,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Buscar"
+                        android:textSize="12sp"
                         app:icon="@android:drawable/ic_search_category_default" />
 
                 </LinearLayout>
